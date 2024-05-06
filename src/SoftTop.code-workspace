@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../SoftTop"
+		},
+		{
+			"name": "xD",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"wiring_private.h": "c"
+		}
+	}
+}
