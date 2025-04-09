@@ -17,14 +17,14 @@ uint8_t CS_PIN = 8;
 CanModule * CAN0, * CAN1;
 packet_t packet;
 void setup() {
-  esp_task_wdt_init(WDT_TIMEOUT, true); //enable panic so ESP32 restarts
-  esp_task_wdt_add(NULL); //add current thread to WDT watch
+  esp_task_wdt_init(WDT_TIMEOUT, true); 
+  esp_task_wdt_add(NULL);
   CAN0 = new CanModule(&baudrate, &CAN_RX_PIN, &CAN_TX_PIN);
   CAN1 = new CanModule(&baudrate, &CS_PIN);
   #if SERIAL==1
     Serial.begin(250000);
     while (!Serial) {
-    ; // wait for serial port to connect. Needed for native USB port only
+    ; // wait for serial port to connect.
     }
   #endif 
 }
